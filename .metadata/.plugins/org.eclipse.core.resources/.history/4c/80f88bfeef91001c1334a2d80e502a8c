@@ -71,6 +71,7 @@ public class Main {
 				break;
 			}
 			case "9":{
+				
 				System.out.println(" \nIngrese el indice del elemento que desea borrar");
 				Lista.deleteFromPosition(ent.nextInt());
 				break;

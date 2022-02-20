@@ -72,7 +72,14 @@ public class Main {
 			}
 			case "9":{
 				System.out.println(" \nIngrese el indice del elemento que desea borrar");
-				Lista.deleteFromPosition(ent.nextInt());
+				int poci = ent.nextInt();
+				if(poci==0) {
+					
+				}else if(poci==Lista.size()-1) {
+					
+				}else {
+					Lista.deleteFromPosition(poci);
+				}
 				break;
 			}
 			case "0":{

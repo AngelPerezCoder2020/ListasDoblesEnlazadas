@@ -212,10 +212,10 @@ public class DoublyLinkedList<E> {
 	public Node<E> searchByValue(E value) { 
 		/* Traverse through each node until this value is found */
 		Node<E> temp = head;
-		while (null != temp.next && false == temp.item.equals(value)) {
+		while (null != temp.next && temp.item != value) {
 			temp = temp.next;
 		}
-		if (temp.item.equals(value)) {
+		if (temp.item == value) {
 			return temp;
 		}
 		return null;

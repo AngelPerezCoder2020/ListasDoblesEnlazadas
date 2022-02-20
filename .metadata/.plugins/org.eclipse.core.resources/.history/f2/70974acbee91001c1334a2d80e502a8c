@@ -54,7 +54,7 @@ public class Main {
 				if(respuesta==null) {
 					System.out.println(" \nNo se ah encontrado ningun item con el valor que usted busca");
 				}else {
-					System.out.println(" \nEl elemento: "+respuesta+" fué encontrado dentro de la lista");
+					System.out.println(" \\nEl elemento: "+respuesta+" fué encontrado dentro de la lista");
 				}
 				ent.nextLine();
 				break;

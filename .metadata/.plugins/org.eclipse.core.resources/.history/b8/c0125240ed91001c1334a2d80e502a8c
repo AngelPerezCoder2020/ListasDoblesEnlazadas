@@ -52,9 +52,9 @@ public class Main {
 				System.out.println(" \nIngrese el valor del Elemento que desea buscar en la lista");
 				String respuesta = Lista.searchByValue(ent.nextLine()).toString();
 				if(respuesta==null) {
-					System.out.println(" \nNo se ah encontrado ningun item con el valor que usted busca");
+					System.out.println("No se ah encontrado ningun item con el valor que usted busca");
 				}else {
-					System.out.println(" \nEl elemento: "+respuesta+" fué encontrado dentro de la lista");
+					System.out.println("El elemento: "+respuesta+" fué encontrado dentro de la lista");
 				}
 				ent.nextLine();
 				break;
@@ -73,6 +73,7 @@ public class Main {
 			case "9":{
 				System.out.println(" \nIngrese el indice del elemento que desea borrar");
 				Lista.deleteFromPosition(ent.nextInt());
+				ent.nextLine();
 				break;
 			}
 			case "0":{
