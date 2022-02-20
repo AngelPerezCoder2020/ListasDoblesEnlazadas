@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Users\angel\OneDrive\Escritorio\ListasDoblesEnlazadas\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+1725319087.index
+1922887689.index
