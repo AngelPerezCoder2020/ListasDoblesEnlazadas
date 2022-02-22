@@ -189,7 +189,7 @@ public class DoublyLinkedList<E> {
 	 */
 	public Node<E> searchByIndex(int index) {
 		if (index < 0 || index >= size) {
-			throw new IndexOutOfBoundsException("Invalid index passed while searching for a value");
+			return null;
 		} 
 		/* Validation passed, let's search for value using the index */
 		Node<E> temp = head;
@@ -211,13 +211,15 @@ public class DoublyLinkedList<E> {
 	 */
 	public Node<E> searchByValue(E value) { 
 		/* Traverse through each node until this value is found */
-		Node<E> temp = head;
-		while (null != temp.next && false == temp.item.equals(value)) {
-			temp = temp.next;
-		}
-		if (temp.item.equals(value)) {
-			return temp;
-		}
+		if(null!=head) {
+			Node<E> temp = head;
+			while (null != temp.next && false == temp.item.equals(value)) {
+				temp = temp.next;
+			}
+			if (temp.item.equals(value)) {
+				return temp;
+			}
+		}	
 		return null;
 	}
 
@@ -227,11 +229,17 @@ public class DoublyLinkedList<E> {
 	public void deleteFromHead() {
 		/* If list is empty, return */
 		if (null == head) { 
+			System.out.println("El Nodo que tratas de borrar no existe");
 			return;
 		}
-		Node<E> temp = head;
-		head = temp.next;
-		head.prev = null;
+		if(size==1) {
+			head=null;
+			tail=null;
+		}else {
+			Node<E> temp = head;
+			head = temp.next;
+			head.prev = null;
+		}
 		size--;
 	}
 
@@ -256,18 +264,19 @@ public class DoublyLinkedList<E> {
 	 */
 	public void deleteFromPosition(int position) {
 		if (position < 0 || position >= size) {
-			throw new IllegalArgumentException("Position is Invalid");
-		} 
-		/* Conditions check passed, let's delete the node */
-		Node<E> nodeToBeDeleted = head;
-		for (int i = 0; i < position; i++) {
-			nodeToBeDeleted = nodeToBeDeleted.next;
+			System.out.println("El Nodo que tratas de borrar no existe");
+		}else {
+			Node<E> nodeToBeDeleted = head;
+			for (int i = 0; i < position; i++) {
+				nodeToBeDeleted = nodeToBeDeleted.next;
+			}
+			Node<E> previousNode = nodeToBeDeleted.prev;
+			Node<E> nextNode = nodeToBeDeleted.next;
+			previousNode.next = nextNode;
+			nextNode.prev = previousNode;
+			size--;
 		}
-		Node<E> previousNode = nodeToBeDeleted.prev;
-		Node<E> nextNode = nodeToBeDeleted.next;
-		previousNode.next = nextNode;
-		nextNode.prev = previousNode;
-		size--;
+		
 	}
 
 	/**
