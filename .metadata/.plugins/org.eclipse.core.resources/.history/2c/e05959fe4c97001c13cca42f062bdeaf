@@ -1,0 +1,33 @@
+package ColasConJavaPackage;
+import com.umg.data.structures.Queue.ArrayBasedQueue;
+import com.umg.data.structures.Queue.LinkedListBasedQueue;
+import java.util.Scanner;
+
+public class ColasConJavaMain {
+	public static void main(String[] args) {
+		Scanner ent = new Scanner(System.in);
+		String opc = "";
+		while(false==opc.equals("0")) {
+			System.out.println("COLAS by Ángel Pérez \n\nComo deseas manejar las Colas? \n1. Basadas en Arrays \n2. Basadas en Listas Enlazadas \n3. SALIR DEL PROGRAMA");
+			switch(opc) {
+			case "1":{
+				
+				break;	
+			}
+			case "2":{
+				break;	
+			}
+			case "0":{
+				System.out.println(" \nADIOSS ;)");
+				ent.nextLine();
+				break;
+			}
+			default:{
+				System.out.println(" \nEsa no es una opción :)");
+				ent.nextLine();
+				break;
+			}
+			}
+		}
+	}
+}

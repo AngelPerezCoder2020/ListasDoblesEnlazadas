@@ -1,0 +1,9 @@
+package ColasConJavaPackage;
+import com.umg.data.structures.Queue.ArrayBasedQueue;
+import com.umg.data.structures.Queue.LinkedListBasedQueue;
+
+public class ColasConJavaMain {
+	public static void main(String[] args) {
+		
+	}
+}
